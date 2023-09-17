@@ -1,0 +1,41 @@
+﻿<Page x:Class="AppForDiplomOnApi.PagesS.CreditsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AppForDiplomOnApi.PagesS"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CreditsPage">
+
+    <Grid>
+        <ScrollViewer>
+            <ListView Name="lvCredits" Width="Auto" HorizontalAlignment="Center">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="BlanchedAlmond" BorderThickness="2" Width="Auto">
+                            <StackPanel Width="750">
+                                <Label Content="Тип кредита:" HorizontalAlignment="Center"/>
+                                <TextBlock Text="{Binding CreditType}" Height="40" HorizontalAlignment="Center"/>
+                                <Label Content="Сумма предоставленного кредита:" HorizontalAlignment="Center"/>
+                                <TextBlock Text="{Binding CreditCash}" Height="40" HorizontalAlignment="Center"/>
+                                <Label Content="Сумма возвращаемого кредита:" HorizontalAlignment="Center"/>
+                                <TextBlock Text="{Binding CreditCashAfterYears}" Height="40" HorizontalAlignment="Center"/>
+                                <Label Content="Оставшийся долг:" HorizontalAlignment="Center"/>
+                                <TextBlock Text="{Binding CreditCashOstatok}" Height="40" HorizontalAlignment="Center"/>
+                                <Label Content="Процент:" HorizontalAlignment="Center"/>
+                                <TextBlock Text="{Binding CreditPercent}" Height="40" HorizontalAlignment="Center"/>
+                                <Label Content="Валюта:" HorizontalAlignment="Center"/>
+                                <TextBlock Text="{Binding CreditValuta}" Height="40" HorizontalAlignment="Center"/>
+                                <Label Content="Дата предоставления:" HorizontalAlignment="Center"/>
+                                <TextBlock Text="{Binding CreditGiveDate, StringFormat=dd.MM.yyyy}" Height="40" HorizontalAlignment="Center"/>
+                                <Label Content="Дата закрытия:" HorizontalAlignment="Center"/>
+                                <TextBlock Text="{Binding CreditBackDate, StringFormat=dd.MM.yyyy}" Height="40" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollViewer>
+    </Grid>
+</Page>

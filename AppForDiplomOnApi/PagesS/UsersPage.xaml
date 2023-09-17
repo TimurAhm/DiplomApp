@@ -1,0 +1,57 @@
+﻿<Page x:Class="AppForDiplomOnApi.PagesS.UsersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AppForDiplomOnApi.PagesS"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UsersPage">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center">
+            <Label Content="Поиск:"/>
+            <TextBox Name="tbSearch" Width="200" Height="35" TextChanged="tbSearchTextChanged"/>
+        </StackPanel>
+        <ScrollViewer Grid.Row="1">
+            <ListView Grid.Row="1" Name="lvUsers" Width="Auto" HorizontalAlignment="Center">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="Black" BorderThickness="2" Width="Auto">
+                            <StackPanel  Width="750">
+                                <Label Content="Фамилия:" HorizontalAlignment="Center"/>
+                                <TextBlock Text="{Binding UserFam}" Height="40" HorizontalAlignment="Center"/>
+                                <Label Content="Имя:" HorizontalAlignment="Center"/>
+                                <TextBlock Text="{Binding UserName}" Height="40" HorizontalAlignment="Center"/>
+                                <Label Content="Отчество:" HorizontalAlignment="Center"/>
+                                <TextBlock Text="{Binding UserOtch}" Height="40" HorizontalAlignment="Center"/>
+                                <Label Content="Номер счета:" HorizontalAlignment="Center"/>
+                                <TextBlock Text="{Binding UserBalanceRef}" Height="40" HorizontalAlignment="Center"/>
+                                <Label Content="Тип клиента:" HorizontalAlignment="Center"/>
+                                <TextBlock Text="{Binding UserRole}" Height="40" HorizontalAlignment="Center"/>
+                                <Label Content="Почтовый адрес:" HorizontalAlignment="Center"/>
+                                <TextBlock Text="{Binding UserLogin}" Height="40" HorizontalAlignment="Center"/>
+                                <Border BorderBrush="Black" BorderThickness="1" Margin="5,5,5,20">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Button Content="Показать кредиты" Click="btShowUsersCredits" Width="200" Height="30" Margin="5" Background="Wheat"/>
+                                        <Button Content="Показать счета" Click="btShowCreditsCredits" Width="200" Margin="5" Background="Wheat"/>
+                                        <Button Content="Показать сведения" Click="btShowUserInform" Width="200" Margin="5" Background="Wheat"/>
+                                    </StackPanel>
+                                </Border>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollViewer>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Width="150" Content="Добавить нового" Click="btAddUserClick" Margin="15" Background="Goldenrod"/>
+            <Button Width="150" Content="Изменить" Click="btRemakeUserClick" Margin="15" Background="Goldenrod"/>
+            <Button Width="150" Content="Удалить" Click="btDeleteUserClick" Margin="15" Background="DarkRed" Foreground="White"/>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,35 @@
+﻿<Page x:Class="AppForDiplomOnApi.PagesS.UserInformPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AppForDiplomOnApi.PagesS"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserInformPage">
+
+    <Grid VerticalAlignment="Center">
+        <ListView Name="lvInform" Width="Auto" HorizontalAlignment="Center">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="BlanchedAlmond" BorderThickness="2" Width="Auto">
+                        <StackPanel Width="750">
+                            <Label Content="Серия паспорта:" HorizontalAlignment="Center"/>
+                            <TextBlock Text="{Binding UserInformPassportSeria}" Height="40" HorizontalAlignment="Center"/>
+                            <Label Content="Номер паспорта:" HorizontalAlignment="Center"/>
+                            <TextBlock Text="{Binding UserInformNomer}" Height="40" HorizontalAlignment="Center"/>
+                            <Label Content="Место работы:" HorizontalAlignment="Center"/>
+                            <TextBlock Text="{Binding UserInformWorkPlace}" Height="40" HorizontalAlignment="Center"/>
+                            <Label Content="Семейное положение:" HorizontalAlignment="Center"/>
+                            <TextBlock Text="{Binding UserInformFamilyType}" Height="40" HorizontalAlignment="Center"/>
+                            <Label Content="Недвижимость:" HorizontalAlignment="Center"/>
+                            <TextBlock Text="{Binding UserInformRealEstate}" Height="40" HorizontalAlignment="Center"/>
+                            <Label Content="Ежемесячный доход:" HorizontalAlignment="Center"/>
+                            <TextBlock Text="{Binding UserInformIncome, StringFormat= 0 руб/месяц}" Height="40" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

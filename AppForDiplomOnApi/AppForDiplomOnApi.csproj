@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ResoursESSS\6fe46f6b765d6880944c21696654c77b.png" />
+    <None Remove="ResoursESSS\square_1280_e5ea0f2abca3c38bc2dcd4d6bffb6e86.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="ResoursESSS\6fe46f6b765d6880944c21696654c77b.png" />
+    <Resource Include="ResoursESSS\square_1280_e5ea0f2abca3c38bc2dcd4d6bffb6e86.png" />
+  </ItemGroup>
+
+</Project>

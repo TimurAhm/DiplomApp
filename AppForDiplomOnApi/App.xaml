@@ -1,0 +1,9 @@
+﻿<Application x:Class="AppForDiplomOnApi.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:AppForDiplomOnApi"
+             StartupUri="/WindSSS/AuthWindow.xaml">
+    <Application.Resources>
+        <BitmapImage UriSource="/ResoursESSS/6fe46f6b765d6880944c21696654c77b.png" x:Key="NullPicture"/>
+    </Application.Resources>
+</Application>

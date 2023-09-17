@@ -1,0 +1,20 @@
+﻿<Window x:Class="AppForDiplomOnApi.WindSSS.AuthWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppForDiplomOnApi.WindSSS"
+        mc:Ignorable="d"
+        Title="AuthWindow" MinHeight="550" MinWidth="800">
+    <Grid Background="White">   
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Source="/ResoursESSS/square_1280_e5ea0f2abca3c38bc2dcd4d6bffb6e86.png" Width="300" Height="200"/>
+            <Label Content="Введите логин:"/>
+            <TextBox Width="400" Height="30" Margin="10,0,0,10" Name="tbLogin"/>
+            <Label Content="Введите пароль:"/>
+            <TextBox Width="400" Height="30" Margin="10,0,0,20" Name="tbPassword"/>
+            <Button Click="tbLogInApp" Width="200" Height="45" Background="#FFA4E26B" BorderBrush="#FFD1A1A1" BorderThickness="2" Content="Войти" Foreground="#FF928B8B"/>
+            <Button Click="btQuitClick" Margin="0,60,0,0" Width="95" Height="45" Background="#FFE3232A" BorderBrush="Black" BorderThickness="2" Content="Выйти" Foreground="White"/>
+        </StackPanel>
+    </Grid>
+</Window>
